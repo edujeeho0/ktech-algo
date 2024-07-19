@@ -4,27 +4,50 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-// https://www.acmicpc.net/problem/15552
+// https://www.acmicpc.net/problem/2738
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader
-                = new BufferedReader(new InputStreamReader(System.in));
-        // test의 갯수를 입력받는다.
-        int tests = Integer.parseInt(reader.readLine());
-        // test의 갯수만큼 반복하면서
-        StringBuilder answer = new StringBuilder();
-        for (int i = 0; i < tests; i++) {
-            // 한줄의 데이터를 입력받고
-            String line = reader.readLine();
-            // 해당 줄을 잘라서
-            String[] tokens = line.split(" ");
-            // 각각 숫자로 바꾼다음 더해준다.
-            int sum = Integer.parseInt(tokens[0])
-                    + Integer.parseInt(tokens[1]);
-            answer.append(sum);
-            answer.append('\n');
-//            System.out.println(sum);
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(System.in)
+        );
+        // 첫번째 줄 입력을 N과 M으로 Parse
+        String[] tokens = reader.readLine().split(" ");
+        int n = Integer.parseInt(tokens[0]);
+        int m = Integer.parseInt(tokens[1]);
+
+        // 행렬의 크기를 바탕으로 2차원 배열들을 만든다.
+        // a행렬
+        int[][] a = new int[n][m];
+        // b행렬
+        int[][] b = new int[n][m];
+        // 합한 결과 행렬
+        int[][] result = new int[n][m];
+
+        // n만큼 반복하면서
+        for (int i = 0; i < n; i++) {
+            // 문자열을 입력받고
+            // 문자열을 해석해서 각 줄에 입력해준다.
+            tokens = reader.readLine().split(" ");
+            int[] row = a[i];
+            for (int j = 0; j < m; j++) {
+                row[j] = Integer.parseInt(tokens[j]);
+            }
+            /*int[] nums = new int[m];
+            for (int j = 0; j < m; j++) {
+                nums[j] = Integer.parseInt(tokens[j]);
+            }
+            // a의 i번째 줄을 받아오고
+            int[] row = a[i];
+            for (int j = 0; j < m; j++) {
+                // a의 i번재 줄의 j번째에 잘 할당해준다.
+                row[j] = nums[j];
+            }*/
         }
-        System.out.print(answer);
     }
 }
+
+
+
+
+
+
