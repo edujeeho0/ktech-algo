@@ -21,12 +21,14 @@ public class D1BubbleSort {
                     array[j + 1] = temp;
                 }
             }
+
+            System.out.println("rep " + i + ": " + Arrays.toString(array));
         }
     }
 
     public static void main(String[] args) {
-        int[] numbers = {36, 12, 18, 15, 41, 19};
-        bubbleSort(numbers);
-        System.out.println(Arrays.toString(numbers));
+        int[] nums = {25, 12, 18, 24, 2, 21, 10, 11, 42, 31, 7, 9};
+        bubbleSort(nums);
+        System.out.println(Arrays.toString(nums));
     }
 }
