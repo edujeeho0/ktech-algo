@@ -13,7 +13,7 @@ public class D2SelectionSort {
             // i 부터 length - 1 까지의 원소들
             // 중 최솟값을 찾는다.
             int minIdx = i;
-            for (int j = i; j < length; j++) {
+            for (int j = i + 1; j < length; j++) {
                 if (array[j] < array[minIdx]) {
                     minIdx = j;
                 }
@@ -49,7 +49,8 @@ public class D2SelectionSort {
 
     public static void main(String[] args) {
 //        minInArray(new int[]{4, 2, 5, 3, 10, 7});
-        int[] nums = {25, 12, 18, 24, 2, 21, 10, 11, 42, 31, 7, 9};
+//        int[] nums = {25, 12, 18, 24, 2, 21, 10, 11, 31, 7, 9};
+        int[] nums = {6, 5, 4, 3, 2, 1};
         selectionSort(nums);
         System.out.println(Arrays.toString(nums));
     }

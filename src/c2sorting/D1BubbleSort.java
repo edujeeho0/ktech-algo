@@ -27,7 +27,8 @@ public class D1BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] nums = {25, 12, 18, 24, 2, 21, 10, 11, 42, 31, 7, 9};
+//        int[] nums = {25, 12, 18, 24, 2, 21, 10, 11, 31, 7, 9};
+        int[] nums = {6, 5, 4, 3, 2, 1};
         bubbleSort(nums);
         System.out.println(Arrays.toString(nums));
     }
