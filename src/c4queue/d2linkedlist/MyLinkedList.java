@@ -70,6 +70,11 @@ public class MyLinkedList {
 
     // 데이터를 중간에서 제거하는 remove
     public int remove(int idx) {
+        if (idx == 0) {
+            int value = start.data;
+            start = start.link;
+            return value;
+        }
         // 데이터를 넣는곳의 앞쪽 노드
         Node prev = start;
         // 데이터를 넣는곳의 뒤쪽 노드
