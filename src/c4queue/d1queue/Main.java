@@ -22,10 +22,13 @@ public class Main {
         }
         // front == 3
         // rear == 15
+        // 공간이 남았지만 가득찼다고 한다...
         System.out.println(intQueue.isFull());
 
         System.out.println("========================================");
 
+        // 원형큐
+        // 데이터를 공간만큼 넣어줄 수 있다.
         MyCyQueue intCyQueue = new MyCyQueue();
         System.out.println(intCyQueue.isEmpty());
         System.out.println(intCyQueue.isFull());
