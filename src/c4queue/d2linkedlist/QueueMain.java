@@ -47,5 +47,20 @@ public class QueueMain {
         // 그 외...
         System.out.println(queue.isEmpty());
         System.out.println(queue.size());
+
+
+
+
+
+
+        int[] array = new int[128];
+
+
+
+
+
+
+
+
     }
 }
