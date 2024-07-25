@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // https://www.acmicpc.net/problem/2503
-public class Main {
+public class Main2503 {
     public static void main(String[] args) throws IOException {
         // 만든 메서드 기능 테스트
         /*int[] target = {3, 2, 4};
