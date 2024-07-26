@@ -60,15 +60,22 @@ public class BreadthFirstSearch {
                 continue;
             }
             // 방문한적 없으면 방문했다 표시
-            visited[now] = true;
+//            visited[now] = true;
             // 3-5. 방문 순서를 기록한다.
-            visitOrder.add(now);
+//            visitOrder.add(now);
             // 3-6. 다음 방문 대상을 toVisit에 enqueue한다.
             for (int next = 1; next < nodes + 1; next++) {
                 // 이미 방문한 곳은 enqueue하지 않고,
                 if (visited[next]) continue;
                 // 내가 연결된 곳만 toVisit에 enqueue한다.
-                if (adjMap[now][next] == 1) toVisit.offer(next);
+//                if (adjMap[now][next] == 1) toVisit.offer(next);
+                if (adjMap[now][next] == 1) {
+                    // BFS는 방문할 순서를 큐에 기록하기 때문에
+                    // 방문 가능한 순서대로 바로 방문했음을 기록할 수 있다.
+                    toVisit.offer(next);
+                    visited[next] = true;
+                    visitOrder.add(next);
+                }
             }
         }
         System.out.println(visitOrder);
